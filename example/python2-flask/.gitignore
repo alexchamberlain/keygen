@@ -1,0 +1,8 @@
+build/*
+venv/*
+bootstrap.py
+base64
+*.pyc
+*.crt
+*.key
+database.db

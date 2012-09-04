@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>&lt;keygen&gt; test</title>
+    <link href='normalize.css'
+          rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Arimo|Pacifico'
+          rel='stylesheet' type='text/css'>
+    <style>
+      @font-face {
+        font-family: "Collegiate";
+        src: url('fonts/Collegiate.otf') 
+      }
+
+      body {
+        background: #FCFCFC url('grey.png') repeat;
+        font-family: 'Arimo', sans-serif;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Pacifico';
+      }
+
+      #github-banner {
+        display: none;
+        height: 149px;
+        width: 149px;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        postion: absolute;
+        top: 0; right: 0;
+      }
+
+      #github-banner a {
+        
+      }
+
+      header, form, section, footer {
+        width: 400px;
+        margin: 20px auto;
+      }
+
+      header {
+        font-family: 'Pacifico';
+        font-size: 3em;
+      }
+
+      form {
+        display: block;
+        overflow: hidden;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        border: 1px solid #D2D2D2;
+        border-radius: 10px;
+        padding: 5px 10px;
+        background: #FCFCFC;
+      }
+
+      label, input, keygen, select[_moz-type="-mozilla-keygen"] {
+        float: left;
+        margin: 5px 0px;
+      }
+
+      label {
+        width: 160px;
+        text-align: right;
+        padding-right: 10px;
+        height: 32px;
+        line-height: 32px;
+      }
+
+      input, keygen, select[_moz-type="-mozilla-keygen"] {
+        border: 1px solid #D2D2D2;
+        border-radius: 3px;
+        padding: 2px 5px;
+        width: 218px;
+        height: 26px;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+      }
+
+      /* Webkit keygen hacks */
+      /* Found this at http://phrappe.com/css/conditional-css-for-webkit-based-browsers/ */
+      @media screen and (-webkit-min-device-pixel-ratio:0) {
+        /* CSS Statements that only apply on webkit-based browsers (Chrome, Safari, etc.) */
+        keygen {
+          border: 0;
+          padding: 0;
+          width: 230px;
+          height: 32px;
+        }
+
+        /* Found this at http://www.css-101.org/articles/base-styles-sheet-for-webkit-based-browsers/styles-sheets-optimization.php#table */
+        keygen::-webkit-keygen-select {
+          margin: 0;
+          border: 1px solid #D2D2D2;
+          border-radius: 3px;
+          padding: 2px 5px;
+          width: 218px;
+          height: 26px;
+          box-sizing: content-box;
+        }
+      }
+
+      input[type="submit"] {
+        margin-left: 170px;
+      }
+
+      
+
+      footer {
+        font-size: 0.75em;
+        color: #D2D2D2;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="github-banner"><a href="#">Fork me on GitHub</a></div>
+    <header>
+      &lt;keygen&gt; test
+    </header>
+    <form action="http://localhost:5000/sign-certificate" method="POST">
+      <label for="public_key">Encryption Algorithm:</label>
+      <keygen name="public_key" />
+      <label for="username">Username:</label>
+      <input name="username" />
+      <input type="submit" />
+    </form>
+    <section>
+      Submit to Hacker News
+    </section>
+    <section>
+      <h1>Status</h1>
+      This website looks the same on
+      <ul>
+        <li>Chromium 21</li>
+        <li>Firefox 15</li>
+      </ul>
+    </section>
+    <section>
+      <h1>TODO</h1>
+      <ul>
+        <li>Develop a polyfill for Internet Explorer.</li>
+      </ul>
+    </section>
+    <footer>
+      Built by
+      <a href="http://www.alexchamberlain.co.uk/">Alex Chamberlain</a>.
+      Background by <a href="http://subtlepatterns.com/">Subtle Patterns</a>.
+    </footer>
+  </body>
+</html>
