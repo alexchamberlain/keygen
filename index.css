@@ -98,6 +98,7 @@ section.button {
 }
 
 section#hn {
+  display: none;
   background: rgb(255,168,76); /* Old browsers */
   background: -moz-linear-gradient(top, rgba(255,168,76,1) 0%, rgba(255,123,13,1) 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,168,76,1)), color-stop(100%,rgba(255,123,13,1))); /* Chrome,Safari4+ */
