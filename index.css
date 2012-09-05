@@ -1,0 +1,115 @@
+body {
+  background: #FCFCFC url('grey.png') repeat;
+  font-family: 'Arimo', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Pacifico';
+}
+
+
+header, form, section, footer {
+  width: 400px;
+  margin: 20px auto;
+}
+
+header {
+  font-family: 'Pacifico';
+  font-size: 3em;
+  text-align: center;
+}
+
+form, section#verified {
+  display: block;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #D2D2D2;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background: #FCFCFC;
+}
+
+form h1, section#verified {
+  line-height: 1.1em;
+  text-align: center;
+}
+
+label, input, keygen, select[_moz-type="-mozilla-keygen"], span.label, span.value {
+  float: left;
+  margin: 5px 0px;
+}
+
+label, span.label {
+  width: 160px;
+  text-align: right;
+  padding-right: 10px;
+  height: 32px;
+  line-height: 32px;
+}
+
+input, keygen, select[_moz-type="-mozilla-keygen"], span.value {
+  border: 1px solid #D2D2D2;
+  border-radius: 3px;
+  padding: 2px 5px;
+  width: 218px;
+  height: 26px;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* Webkit keygen hacks */
+/* Found this at http://phrappe.com/css/conditional-css-for-webkit-based-browsers/ */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  /* CSS Statements that only apply on webkit-based browsers (Chrome, Safari, etc.) */
+  keygen {
+    border: 0;
+    padding: 0;
+    width: 230px;
+    height: 32px;
+  }
+
+  /* Found this at http://www.css-101.org/articles/base-styles-sheet-for-webkit-based-browsers/styles-sheets-optimization.php#table */
+  keygen::-webkit-keygen-select {
+    margin: 0;
+    border: 1px solid #D2D2D2;
+    border-radius: 3px;
+    padding: 2px 5px;
+    width: 218px;
+    height: 26px;
+    box-sizing: content-box;
+  }
+}
+
+input[type="submit"] {
+  margin-left: 170px;
+}
+
+section.button {
+  border: 1px solid #D2D2D2;
+  background: #FCFCFC;
+  border-radius: 10px;
+  padding: 5px 10px;
+  text-align: center;
+}
+
+section#hn {
+  background: rgb(255,168,76); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(255,168,76,1) 0%, rgba(255,123,13,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,168,76,1)), color-stop(100%,rgba(255,123,13,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(255,168,76,1) 0%,rgba(255,123,13,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(255,168,76,1) 0%,rgba(255,123,13,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(255,168,76,1) 0%,rgba(255,123,13,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(255,168,76,1) 0%,rgba(255,123,13,1) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa84c', endColorstr='#ff7b0d',GradientType=0 ); /* IE6-9 */
+  border-color: #FF6600;
+}
+
+footer {
+  font-size: 0.75em;
+  color: #D2D2D2;
+}

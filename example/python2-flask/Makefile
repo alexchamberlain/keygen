@@ -11,12 +11,15 @@ venv: bootstrap.py
 	./bootstrap.py -p python2 venv
 	chmod u+x venv/bin/activate
 
-.PHONY: clean activate run
+.PHONY: clean run
 
 clean:
 	- rm -rf venv bootstrap.py
 
 run: keygen.py
 	python keygen.py
+
+uwsgi:
+	venv/bin/uwsgi -H venv -w keygen:app -s uwsgi.sock -M
 
 # vim: tabstop=8 noexpandtab

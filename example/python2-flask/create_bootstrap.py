@@ -7,6 +7,7 @@ def after_install(options, home_dir):
   pip   = os.path.join(home_dir, 'bin', 'pip')
   subprocess.call([pip, 'install', 'flask'])
   subprocess.call([pip, 'install', 'pyopenssl'])
+  subprocess.call([pip, 'install', 'uwsgi'])
 """))
 
 with open('bootstrap.py', 'w') as f:
